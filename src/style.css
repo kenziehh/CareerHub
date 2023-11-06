@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@400;500;600;700&family=Open+Sans&family=Poppins:wght@300;400;500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Nunito:ital,wght@0,400;0,600;0,700;0,1000;1,900&family=Poppins:wght@300;400&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -41,6 +41,12 @@ p {
   line-height: 22px; /* 122.222% */
   letter-spacing: -0.072px;
 }
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 button {
   text-align: center;
   font-family: Inter;
@@ -73,7 +79,6 @@ nav {
   padding: 0 220px 0 220px;
 }
 .menu ul {
-  list-style: none;
   padding: 0 52px;
 }
 .menu li {
@@ -82,7 +87,6 @@ nav {
   margin-right: 24px;
 }
 .menu li a {
-  text-decoration: none;
   color: var(--neutral-50, #666);
   font-family: Inter;
   font-size: 18px;
@@ -167,14 +171,18 @@ nav {
   background: #2758bf;
   border: none;
 }
+
 .universities {
   margin: 0 120px;
+  padding-bottom: 225px;
 }
+
 .universities h2 {
   margin: 0 321px;
   padding: 74px 100px 100px 100px;
   width: 400px;
 }
+
 .universities-logo img {
   width: 150px;
   height: 150px;
@@ -185,6 +193,93 @@ nav {
   margin-right: 0px;
   /* ga berfungsi */
 }
+.faq-container {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: calc((100% - 1200px) / 2);
+  margin-right: calc((100% - 1200px) / 2);
+}
+.faq {
+  margin-bottom: 126.5px;
+}
+
+.faq-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+}
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.question-container {
+  display: flex;
+  padding: 0 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--1, #d6dae0);
+  background: #fff;
+}
+.question-list {
+  display: flex;
+  width: 508px;
+  justify-content: space-between;
+  align-items: center;
+}
+.question-list h4 {
+  width: 379px;
+  flex-shrink: 0;
+}
+
+footer {
+  background: #aaa;
+  padding: 100px 320px;
+  height: 200px;
+}
+.footer-text {
+  margin-right: 237px;
+  float: left;
+}
+.footer-text p {
+  width: 432px;
+  color: var(--neutral-50, #666);
+  text-align: justify;
+}
+.footer-nav {
+  float: left;
+}
+.footer-nav h5 {
+  color: rgba(0, 0, 0, 0.3);
+  text-align: justify;
+
+  /* Heading/5 */
+  font-family: Nunito;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 10px; /* 122.222% */
+  letter-spacing: -0.072px;
+}
+.footer-nav h3 {
+  color: rgba(0, 0, 0, 0.40);
+  text-align: justify;
+  margin-bottom: 50px;
+  /* Heading/3 */
+  font-family: Nunito;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 10px; /* 125% */
+  letter-spacing: -0.12px;
+}
+
 
 section {
   padding: 2.5rem 0;
