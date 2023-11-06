@@ -51,7 +51,7 @@ nav {
   border-radius: 20px;
   background: #d4e1f9;
   margin: 35px 40px 0 35px;
-  background-image: url("assets/image/ellipse.png");
+  background-image: url("/assets/image/ellipse.png");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 744px;
@@ -107,7 +107,7 @@ nav {
   height: 70px;
   top: 200px;
   left: 365px;
-  background: url("assets/image/traveloka-flying-icon.png"),
+  background: url("/assets/image/traveloka-flying-icon.png"),
     rgb(255, 255, 255) 50% / cover no-repeat;
 }
 
@@ -120,7 +120,7 @@ nav {
   height: 100px;
   top: 540px;
   right: 460px;
-  background: url("assets/image/grab-flying-icon.png"),
+  background: url("/assets/image/grab-flying-icon.png"),
     rgb(255, 255, 255) 50% / cover no-repeat;
 }
 .tokopedia-fly {
@@ -128,7 +128,7 @@ nav {
   right: 340px;
   width: 90px;
   height: 90px;
-  background: url("assets/image/tokopedia-flying-icon.png"),
+  background: url("/assets/image/tokopedia-flying-icon.png"),
     rgb(255, 255, 255) 50% / cover no-repeat;
 }
 .blibli-fly {
@@ -136,7 +136,7 @@ nav {
   right: 260px;
   width: 80px;
   height: 80px;
-  background: url("assets/image/blibli-flying-icon.png"),
+  background: url("/assets/image/blibli-flying-icon.png"),
     rgb(255, 255, 255) 50% / cover no-repeat;
 }
 .landing-content {
