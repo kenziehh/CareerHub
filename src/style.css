@@ -23,6 +23,7 @@ h2 {
   line-height: 46px; /* 115% */
   letter-spacing: -0.24px;
 }
+
 h3 {
   font-family: Inter;
   font-size: 32px;
@@ -56,12 +57,7 @@ button {
   line-height: 22px; /* 122.222% */
   letter-spacing: -0.072px;
 }
-nav {
-  padding: 35px 85px 0 85px;
-  /* display: flex;
-  justify-content: space-between; */
-}
-.container {
+.background-container {
   border-radius: 20px;
   background: #d4e1f9;
   margin: 35px 40px 0 35px;
@@ -70,24 +66,22 @@ nav {
   background-size: 100%;
   height: 744px;
 }
-.logo {
-  display: inline-block;
-  vertical-align: middle;
-}
-.menu {
-  display: inline-block;
-  padding: 0 220px 0 220px;
-}
-.menu ul {
-  padding: 0 52px;
-}
-.menu li {
+nav {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  float: left;
-  margin-right: 24px;
+  padding: 30px 80px 0 90px;
 }
-.menu li a {
-  color: var(--neutral-50, #666);
+nav a img {
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+nav ul li a {
+  color: rgba(102, 102, 102, 0.6);
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
@@ -95,65 +89,67 @@ nav {
   line-height: 22px; /* 122.222% */
   letter-spacing: -0.072px;
 }
-.login-button {
-  float: right;
+.auth-button {
+  display: flex;
   padding: 15px 25px;
   align-items: center;
-  gap: 8px;
-  cursor: pointer;
   border-radius: 10px;
-  border: 2px solid #2758bf;
   color: #2758bf;
-  background: #fff;
+  border: 2px solid #2758bf;
+  background-color: #fff;
+  cursor: pointer;
 }
-.fly div,
-.fly img {
+.icon-company {
+  /* position: relative; */
+}
+.icon-company img {
   position: absolute;
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.05);
+}
+.icon-company .traveloka {
+  top: 167px;
+  left: 335px;
+}
+.icon-company .tokopedia {
+  top: 147px;
+  right: 298px;
+}
+.icon-company .gojek {
+  top: 365px;
+  left: 140px;
+}
+.icon-company .grab {
+  position: absolute;
+  top: 543px;
+  right: 423px;
   border-radius: 1000px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-.traveloka-fly {
-  width: 70px;
-  height: 70px;
-  top: 200px;
-  left: 365px;
-  background: url("/assets/image/traveloka-flying-icon.png"),
-    rgb(255, 255, 255) 50% / cover no-repeat;
-}
-
-.gojek-fly {
-  top: 400px;
-  left: 170px;
-}
-.grab-fly {
+  background: #fff;
   width: 100px;
   height: 100px;
-  top: 540px;
-  right: 460px;
-  background: url("/assets/image/grab-flying-icon.png"),
-    rgb(255, 255, 255) 50% / cover no-repeat;
+  display: flex;
+  align-items: center;
 }
-.tokopedia-fly {
-  top: 180px;
-  right: 340px;
-  width: 90px;
-  height: 90px;
-  background: url("/assets/image/tokopedia-flying-icon.png"),
-    rgb(255, 255, 255) 50% / cover no-repeat;
+.icon-company .grab img {
+  width: 82px;
+  height: 30px;
 }
-.blibli-fly {
-  top: 385px;
-  right: 260px;
-  width: 80px;
-  height: 80px;
-  background: url("/assets/image/blibli-flying-icon.png"),
-    rgb(255, 255, 255) 50% / cover no-repeat;
+.icon-company .blibli {
+  top: 350px;
+  right: 218px;
 }
+
 .landing-content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 115px 33% 264px 33%;
+  /* gap: 56px; */
+  padding: 116px 380px 0 420px;
+}
+.landing-content .landing-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .landing-content h1 {
@@ -161,7 +157,7 @@ nav {
   text-align: center;
 }
 .landing-content p {
-  width: 520px;
+  width: 639px;
   padding-bottom: 56px;
 }
 .find-company {
@@ -170,6 +166,7 @@ nav {
   border-radius: 10px;
   background: #2758bf;
   border: none;
+  cursor: pointer;
 }
 
 .universities {
@@ -268,7 +265,7 @@ footer {
   letter-spacing: -0.072px;
 }
 .footer-nav h3 {
-  color: rgba(0, 0, 0, 0.40);
+  color: rgba(0, 0, 0, 0.4);
   text-align: justify;
   margin-bottom: 50px;
   /* Heading/3 */
@@ -279,7 +276,6 @@ footer {
   line-height: 10px; /* 125% */
   letter-spacing: -0.12px;
 }
-
 
 section {
   padding: 2.5rem 0;
