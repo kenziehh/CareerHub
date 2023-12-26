@@ -4,7 +4,7 @@ import { FiSliders } from "react-icons/fi";
 
 export default function Filter() {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 overflow-x-auto">
       <Button variant="disabled">
         Filter <FiSliders />
       </Button>

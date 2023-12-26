@@ -7,21 +7,26 @@ import { useState } from "react";
 import { FiCheckCircle, FiBook, FiGlobe, FiBriefcase } from "react-icons/fi";
 
 export default function Perusahaan() {
-  const [selectedId, setSelectedId] = useState(0);
+  const [selectedId, setSelectedId] = useState(1);
 
   return (
     <section className="space-y-4">
       <InputSearch />
-      <section className="container space-y-8 h-screen">
+      <section className="container space-y-8 h-screen pt-4">
         <Filter />
         <div className="flex flex-col h-full gap-6">
           <div className="flex gap-4 h-full py-4">
-            <div className="flex-[.8] grid gap-4 overflow-y-scroll">
-              {dummyData.map((item, index) => (
-                <PerusahaanCard key={index} data={item} />
+            <div className="lg:flex-[.8] grid gap-4 overflow-y-scroll">
+              {dummyData.map((item) => (
+                <PerusahaanCard
+                  key={item.id}
+                  data={item}
+                  selectedId={selectedId}
+                />
               ))}
             </div>
-            <div className="flex-1 grid gap-4 overflow-y-scroll">
+
+            <div className="hidden flex-1 lg:grid gap-4 overflow-y-scroll">
               <Card className="h-max">
                 <div className="flex justify-between w-full">
                   <div className="flex gap-4 ">
@@ -103,6 +108,20 @@ export default function Perusahaan() {
                   pengoptimalan dan/atau eksperimen Kuat dan berorientasi pada
                   detail untuk menangani banyak pekerjaan
                 </p>
+                <div className="flex gap-4 items-center justify-between w-full">
+                  <div className="flex gap-4 items-center">
+                    <img
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                      className="w-20 h-20 rounded-full object-cover"
+                    />
+                    <div className="">
+                      <h4>Namira Dinda.H</h4>
+                      <p>Human Resources at Gojek</p>
+                    </div>
+                  </div>
+                  <Button variant="default">Kontak</Button>
+                </div>
               </Card>
             </div>
           </div>
@@ -112,8 +131,9 @@ export default function Perusahaan() {
   );
 }
 
-const PerusahaanCard = ({ data }) => {
+const PerusahaanCard = ({ data, selectedId }) => {
   const {
+    id,
     location,
     postedAt,
     imgUrl,
@@ -124,7 +144,11 @@ const PerusahaanCard = ({ data }) => {
   } = data;
 
   return (
-    <Card className="gap-4">
+    <Card
+      className={`gap-4 ${
+        id == selectedId && "lg:border-primaryBlue lg:border-[2px]"
+      }`}
+    >
       <div className="flex justify-between w-full font-light">
         <span className="flex items-center gap-1">
           <SlLocationPin className="text-2xl" />
@@ -136,8 +160,8 @@ const PerusahaanCard = ({ data }) => {
       <div className="h-[1px] w-full bg-gray-300" />
 
       <div className="space-y-4">
-        <div className="flex gap-4 ">
-          <img src={imgUrl} alt="" className="w-20 h-20" />
+        <div className="flex gap-4 items-center">
+          <img src={imgUrl} alt="" className="w-20 h-20 object-cover" />
           <div>
             <p>{companyName}</p>
             <h3>{jobPosition}</h3>
@@ -146,7 +170,7 @@ const PerusahaanCard = ({ data }) => {
         <p className="font-light">{jobDescription}</p>
       </div>
 
-      <div className="flex gap-2 overflow-x-scroll">
+      <div className="flex gap-2 overflow-x-auto">
         {tags.map((tag, index) => (
           <Button key={index} variant="disabled">
             {tag}
@@ -195,7 +219,7 @@ const dummyData = [
     jobPosition: "Social Media Specialist",
     jobDescription:
       "Jika Anda ingin menjadi bagian dari tim yang gesit, dinamis, menyenangkan, berbasis data, dan peluang untuk mempertajam keterampilan pemasaran media sosial Anda, tidak perlu mencari lagi. Sebagai Spesialis Media Sosial kami, Anda akan mengendalikan salah satu halaman media sosial Gojek.",
-    tags: ["Entry Level", "Hybrid", "Full time", "D3/S1"],
+    tags: ["Entry Level", "Hybrid", "Full time", "SMA/SMK"],
   },
   {
     id: 2,
@@ -206,10 +230,10 @@ const dummyData = [
     jobPosition: "Product Copywriter",
     jobDescription:
       "Membuat salinan atau konten untuk pengguna saat menggunakan produk digital kami. Ia menganjurkan pentingnya memanusiakan produk digital melalui kata-kata, bahwa kata-kata memiliki nuansa, dan tanpa kata-kata, produk kita akan menjadi bentuk tanpa wajah, tanpa suasana hati atau nada suara.",
-    tags: ["Mid Level", "On site", "Internship"],
+    tags: ["Mid Level", "On site", "Internship", "S1/D4"],
   },
   {
-    id: 1,
+    id: 3,
     location: "Jakarta, Indonesia",
     postedAt: "5 Hari Lalu",
     imgUrl: "/assets/icons/tokopedia-icon.png",
@@ -217,7 +241,7 @@ const dummyData = [
     jobPosition: "Data Engineer",
     jobDescription:
       "Berpartisipasi dalam proses SDLC penuh pengembangan Platform Data mulai dari perancangan, pengembangan, pengujian, penerapan, pemeliharaan, pemantauan, dan peningkatan layanan. Membangun dan mengoptimalkan arsitektur jalur data, mulai dari menyerap berbagai data ke penyimpanan gudang data.",
-    tags: ["Senior Level", "Hybrid", "Part time"],
+    tags: ["Senior Level", "Hybrid", "Part time", "S2"],
   },
   // Add more data objects as needed
 ];
