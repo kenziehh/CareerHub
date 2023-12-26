@@ -25,7 +25,7 @@ const Button = ({ children, variant = 'primary', size = 'default', className = '
     }
   };
 
-  const baseStyles = 'flex items-center gap-2 font-medium border-2 rounded-xl transition-all duration-300 focus:outline-none flex-shrink-0';
+  const baseStyles = 'flex justify-center items-center text-center gap-2 font-medium border-2 rounded-xl transition-all duration-300 focus:outline-none flex-shrink-0';
 
   return (
     <button

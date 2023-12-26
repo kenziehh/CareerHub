@@ -3,8 +3,12 @@ import Card from "../../components/Card";
 import Filter from "./Filter";
 import { SlLocationPin } from "react-icons/sl";
 import { HiOutlineSearch } from "react-icons/hi";
+import { useState } from "react";
+import { FiCheckCircle, FiBook, FiGlobe, FiBriefcase } from "react-icons/fi";
 
 export default function Perusahaan() {
+  const [selectedId, setSelectedId] = useState(0);
+
   return (
     <section className="space-y-4">
       <InputSearch />
@@ -14,12 +18,93 @@ export default function Perusahaan() {
           <div className="flex gap-4 h-full py-4">
             <div className="flex-[.8] grid gap-4 overflow-y-scroll">
               {dummyData.map((item, index) => (
-                <PerusahaanCard key={index} data={item}/>
+                <PerusahaanCard key={index} data={item} />
               ))}
             </div>
-            <Card className="flex-1 h-max">
+            <div className="flex-1 grid gap-4 overflow-y-scroll">
+              <Card className="h-max">
+                <div className="flex justify-between w-full">
+                  <div className="flex gap-4 ">
+                    <img
+                      src={dummyData[selectedId].imgUrl}
+                      alt=""
+                      className="w-20 h-20"
+                    />
+                    <div className="w-[60%]">
+                      <p>{dummyData[selectedId].companyName}</p>
+                      <h3>{dummyData[selectedId].jobPosition}</h3>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <Button variant="default">
+                      Lamar
+                      <FiCheckCircle />
+                    </Button>
+                    <Button>
+                      Panduan <FiBook />
+                    </Button>
+                  </div>
+                </div>
 
-            </Card>
+                <ul>
+                  <li className="flex items-center gap-2">
+                    <SlLocationPin className="text-xl" />
+                    {dummyData[selectedId].location}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FiBriefcase className="text-xl" />
+                    {dummyData[selectedId].location}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <FiGlobe className="text-xl" /> Advertising, Digital
+                    Marketing, Social Media
+                  </li>
+                </ul>
+
+                <div className="h-[1px] w-full bg-gray-300" />
+
+                <p>
+                  Anda akan memaparkan konten media sosial, strategi, dan
+                  eksekusi untuk memastikan penyampaian yang sangat baik.
+                  Mengolah data untuk mengumpulkan wawasan untuk perbaikan
+                  tindakan selanjutnya. Bekerja sama dengan pemangku kepentingan
+                  lainnya mulai dari pemasaran merek, produk, dan urusan
+                  korporat hingga layanan pelanggan untuk mendukung kebutuhan
+                  mereka melalui ranah media sosial. Anda akan menjadi orang
+                  media sosial yang bertanggung jawab atas segala kebutuhan dan
+                  mengukur dampak hasil ini terhadap OKR.
+                </p>
+                <p>
+                  Apa yang akan kamu lakukan : Menjadi penanggung jawab
+                  pembuatan kampanye dan konten media sosial; mulai dari
+                  mengamati tren dan referensi, brainstorming, perencanaan
+                  hingga pelaksanaan (termasuk jadwal dan pos) Mengembangkan
+                  strategi kampanye media sosial berkolaborasi dengan pemangku
+                  kepentingan lainnya Membuat strategi KOL berkolaborasi dengan
+                  pemangku kepentingan dan pihak ketiga Memanfaatkan alat media
+                  sosial untuk menganalisis kampanye media sosial, konten, dan
+                  KOL untuk mengumpulkan wawasan dan rencana aksi Berkolaborasi
+                  dengan pemasaran merek untuk menyampaikan/mendukung kebutuhan
+                  pemasaran
+                </p>
+                <p>
+                  Persyaratan : Setidaknya 2 tahun pengalaman kerja terkait di
+                  biro iklan atau start-up Keterampilan menulis, mengedit, dan
+                  membaca bukti yang kuat Kemampuan mengkomunikasikan ide dengan
+                  jelas; pola pikir analitis dan berbasis data yang kuat
+                  Pengetahuan luas tentang lanskap, platform, dan teknologi
+                  media sosial Memiliki minat pada platform digital, khususnya
+                  media sosial, dan kemauan untuk mempelajari lebih lanjut
+                  tentang ruang digital ini Pemain tim yang kuat dengan sikap
+                  proaktif dan pikiran kreatif/inovatif untuk berkolaborasi
+                  dengan berbagai pemangku kepentingan Kemampuan analitis yang
+                  kuat untuk membaca, menafsirkan, dan memanfaatkan data, dan
+                  menghasilkan poin-poin yang dapat ditindaklanjuti untuk
+                  pengoptimalan dan/atau eksperimen Kuat dan berorientasi pada
+                  detail untuk menangani banyak pekerjaan
+                </p>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -47,6 +132,7 @@ const PerusahaanCard = ({ data }) => {
         </span>
         <span>{postedAt}</span>
       </div>
+
       <div className="h-[1px] w-full bg-gray-300" />
 
       <div className="space-y-4">
@@ -60,7 +146,7 @@ const PerusahaanCard = ({ data }) => {
         <p className="font-light">{jobDescription}</p>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 overflow-x-scroll">
         {tags.map((tag, index) => (
           <Button key={index} variant="disabled">
             {tag}
@@ -82,11 +168,11 @@ const InputSearch = () => {
     >
       <div className="container">
         <div className="rounded-xl p-2 pl-12 bg-white flex justify-between">
-          <div className="flex items-center gap-4">
-            <HiOutlineSearch className="text-gray-400 text-xl" />
+          <div className="flex items-center gap-4 w-full">
+            <HiOutlineSearch className="text-gray-400 text-xl " />
             <input
               placeholder="Cari Lowongan"
-              className="bg-transparent outline-0"
+              className="bg-transparent outline-0 w-full h-full"
             />
           </div>
 
@@ -109,7 +195,7 @@ const dummyData = [
     jobPosition: "Social Media Specialist",
     jobDescription:
       "Jika Anda ingin menjadi bagian dari tim yang gesit, dinamis, menyenangkan, berbasis data, dan peluang untuk mempertajam keterampilan pemasaran media sosial Anda, tidak perlu mencari lagi. Sebagai Spesialis Media Sosial kami, Anda akan mengendalikan salah satu halaman media sosial Gojek.",
-    tags: ["Entry Level", "Hybrid", "Full time"],
+    tags: ["Entry Level", "Hybrid", "Full time", "D3/S1"],
   },
   {
     id: 2,
