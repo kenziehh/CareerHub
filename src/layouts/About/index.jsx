@@ -1,5 +1,13 @@
+import AboutContent from "./AboutContent";
+import AboutHeader from "./AboutHeader";
+import AboutInfo from "./AboutInfo";
+
 export default function About() {
   return (
-    <div>About</div>
-  )
+    <>
+      <AboutHeader />
+      <AboutContent />
+      <AboutInfo />
+    </>
+  );
 }
