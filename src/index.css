@@ -55,18 +55,6 @@
   }
 }
 
-.industry-card {
-  background: white;
-  display: flex;
-  padding: 30px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  border-radius: 20px;
-  border: 1px #d6dae0 solid;
-  width: 300px;
-}
-
 .testimoni-container {
   height: 100%;
   width: 100%;

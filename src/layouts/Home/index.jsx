@@ -1,3 +1,4 @@
+import FAQ from "./FAQ";
 import Landing from "./Landing";
 import Partner from "./Partner";
 import Testimoni from "./Testimoni";
@@ -10,6 +11,7 @@ export default function Home() {
       <Partner />
       <TopPerusahaan />
       <Testimoni />
+      <FAQ />
     </>
   );
 }
