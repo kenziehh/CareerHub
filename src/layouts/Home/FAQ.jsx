@@ -4,7 +4,7 @@ import { BsArrowDownCircle } from "react-icons/bs";
 export default function FAQ() {
   const [isActive, setIsActive] = React.useState(1);
   return (
-    <div className="container flex py-12">
+    <div className="container flex py-12 gap-8">
       <div className="flex-1">
         <img src="/assets/images/faq-img.png" alt="" />
       </div>
