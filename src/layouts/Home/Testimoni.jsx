@@ -9,15 +9,15 @@ export default function Testimoni() {
         <img
           src="/assets/images/testimoni-bg/left.png"
           alt=""
-          className="absolute left-0 top-0 -z-10"
+          className="hidden md:block absolute left-0 top-0 -z-10"
         />
         <img
           src="/assets/images/testimoni-bg/right.png"
           alt=""
-          className="absolute right-0 bottom-0 -z-10"
+          className="hidden md:block absolute right-0 bottom-0 -z-10"
         />
         <h2>Testimoni</h2>
-        <div className="flex gap-4 justify-center items-center">
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <TestimoniCard />
           <TestimoniCard />
           <TestimoniCard />

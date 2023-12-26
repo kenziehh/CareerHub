@@ -13,12 +13,12 @@ export default function Perusahaan() {
         <div className="flex flex-col h-full gap-6">
           <div className="flex gap-4 h-full py-4">
             <div className="flex-[.8] grid gap-4 overflow-y-scroll">
-              {dummyData.map((item) => (
-                <PerusahaanCard data={item}/>
+              {dummyData.map((item, index) => (
+                <PerusahaanCard key={index} data={item}/>
               ))}
             </div>
             <Card className="flex-1 h-max">
-              
+
             </Card>
           </div>
         </div>
