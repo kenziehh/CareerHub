@@ -12,7 +12,7 @@ const HeroBantuan = () => {
       <div className="flex items-center justify-between">
         <div className="inline-flex flex-col flex-start gap-8 max-w-[480px]">
           <h1 className="">Persiapkan untuk kesuksesan karirmu</h1>
-          <p>
+          <p className="text-primaryGray">
             Dapatkan akses eksklusif ke panduan terbaik, tips wawancara yang
             terpercaya, dan sumber daya karir yang akan membimbing Anda menuju
             kesuksesan dalam dunia kerja.
