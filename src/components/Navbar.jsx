@@ -3,13 +3,20 @@ import navLogo from "/assets/icons/logo-nav.png";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const location = useLocation();
 
+  useEffect(() => {
+    isOpen(false);
+  }, [location]);
+
   const isActive = (path) => {
     return location.pathname === path;
   };
+
+  const [open, isOpen] = useState(false);
 
   return (
     <nav className="sticky flex items-center justify-between container py-[30px] body-text-1 font-medium z-[1000]">
@@ -17,8 +24,28 @@ export default function Navbar() {
         <img src={navLogo} alt="Logo" />
       </Link>
 
-      <div className="hidden lg:flex items-center flex-1 justify-end">
-        <ul className="flex gap-6 flex-1 justify-center">
+      <div
+        onClick={() => isOpen(!open)}
+        className={`items-center cursor-pointer lg:hidden transition-all duration-500 ${
+          open ? "hidden" : ""
+        }`}
+      >
+        <FaBars name={open ? "close" : "menu"} size={40} />
+      </div>
+      <div
+        className={`items-center cursor-pointer lg:hidden z-10 transition-all duration-1000 ${
+          open ? "z-10" : "hidden"
+        }`}
+        onClick={() => isOpen(!open)}
+      >
+        <RxCross1 size={40} />
+      </div>
+      <div
+        className={`flex items-start flex-1 justify-end flex-col gap-8 lg:flex lg:flex-row lg:items-center absolute lg:static py-20 lg:py-0 bg-white lg:z-auto left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${
+          open ? "top-0 " : "top-[-490px]"
+        }`}
+      >
+        <ul className="flex flex-col gap-8 items-start lg:flex lg:flex-row lg:gap-6 flex-1 justify-center">
           <li>
             <Link
               to="/"
@@ -58,8 +85,9 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
-
-        <Button>Masuk</Button>
+        <div className="flex items-center">
+          <Button>Masuk</Button>
+        </div>
       </div>
     </nav>
   );
