@@ -1,6 +1,5 @@
 import React from "react";
 import HeroBantuan from "./HeroBantuan";
-import Interview from "./Interview";
 import ReusableCard from "/src/components/TopPerusahaanCard";
 import EventSection from "/src/components/EventSection";
 
