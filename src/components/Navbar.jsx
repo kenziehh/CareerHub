@@ -76,7 +76,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              to="/"
+              to="/bantuan"
               className={
                 isActive("/bantuan") ? "text-primaryBlue" : "text-secGray"
               }

@@ -5,6 +5,8 @@ import GlobalLayout from "./layouts/GlobalLayout";
 import Home from "./layouts/Home";
 import Navbar from "./components/Navbar";
 import NonFooter from "./layouts/NonFooter";
+import Bantuan from "./layouts/Bantuan";
+
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
         <Route element={<GlobalLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/bantuan" element={<Bantuan/>} />
         </Route>
         <Route element={<NonFooter />}>
           <Route path="/perusahaan" element={<Perusahaan />} />
