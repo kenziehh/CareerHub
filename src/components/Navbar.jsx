@@ -1,11 +1,9 @@
 import Button from "./Button";
 import navLogo from "/assets/icons/logo-nav.png";
 import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa6";
 
 export default function Navbar() {
-
-  
-
   return (
     <nav className="sticky flex items-center justify-between container py-[30px] body-text-1 font-medium z-[1000]">
       <Link to="/" className="flex-shrink-0 ">
