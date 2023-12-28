@@ -6,7 +6,7 @@ import Home from "./layouts/Home";
 import Navbar from "./components/Navbar";
 import NonFooter from "./layouts/NonFooter";
 import Bantuan from "./layouts/Bantuan";
-
+import Interview from "./layouts/About/Interview";
 
 const App = () => {
   return (
@@ -15,7 +15,12 @@ const App = () => {
         <Route element={<GlobalLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/bantuan" element={<Bantuan/>} />
+          <Route path="/bantuan">
+            <Route index element={<Bantuan />} />
+            <Route path="/bantuan/interview" element={<Interview />} />
+            <Route path="/bantuan/cv" element={<Interview />} />
+            <Route path="/bantuan/workshop" element={<Interview />} />
+          </Route>
         </Route>
         <Route element={<NonFooter />}>
           <Route path="/perusahaan" element={<Perusahaan />} />
