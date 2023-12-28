@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "/src/components/Button";
-import { Link } from "react-router-dom";
+import ArrowButton from "/src/components/ArrowButton";
 
 const InterviewHero = () => {
   return (
