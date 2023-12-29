@@ -46,32 +46,33 @@ export default function FAQ() {
 const faqData = [
   {
     id: 1,
-    question: "Apakah produk kesehatan ini memerlukan perawatan?",
+    question: "Bagaimana cara melamar Pekerjaan di situs ini?",
     answer:
-      "Produk asisten kesehatan kami dirancang untuk meminimalkan perawatan dan pemeliharaan. Namun, kami merekomendasikan perawatan rutin dan pemeliharaan sesuai dengan panduan.",
+      "Untuk melamar pekerjaan, Pergi ke halaman perusahaan. Pilih perusahaan sesuai dengan kriteria dan minat Anda. Baca panduan sebelum melamar, lalu klik tombol Lamar untuk melamar pekerjaan.",
   },
   {
     id: 2,
-    question: "Bagaimana cara memesan produk kesehatan ini?",
+    question: "Bagaimana saya dapat mengetahui status lamaran kerja saya?",
     answer:
-      "Untuk memesan produk asisten kesehatan kami, silakan login terlebih dahulu. Anda dapat mengisi formulir kontak dengan detail Anda, pada page produk di website kami atau menghubungi tim layanan pelanggan.",
+      "Untuk mengetahui status lamaran kerja, nantinya perusahaan terkait akan mengirimkan email kepada masing-masing pelamar secara pribadi.",
   },
   {
     id: 3,
-    question: "Bagaimana cara menggunakan produk asisten kesehatan ini?",
+    question: "Bagaimana website ini dapat mengembangkan karir saya?",
     answer:
-      "Penggunaan produk asisten kesehatan kami sangat sederhana. Setiap produk dilengkapi dengan panduan penggunaan yang jelas. Tim teknis kami juga akan memberikan pelatihan awal.",
+      "Pada halaman bantuan, terdapat banyak fitur untuk mengembangkan skill anda mulai dari tips dan tatacara interview, membuat CV, membuat surat lamaran, dan juga terdapat workshop untuk pengembangan skill.",
   },
   {
     id: 4,
-    question: "Bagaimana sistem keamanan dan privasi diatur dalam produk ini?",
+    question:
+      "Apakah sebagai mahasiswa dan alumni dapat melamar magang secara online melalui portal Universitas?",
     answer:
-      "Produk asisten kesehatan kami dilengkapi dengan fitur keamanan tingkat tinggi dan pengamanan data yang kuat. Kami mematuhi standar tertinggi dalam menjaga keamanan dan privasi data pasien.",
+      "Ya, akan tetapi hanya Universitas yang sudah bekerjasama dengan kami saja yang memiliki fitur melamar magang melalui website Universitas masing-masing.",
   },
   {
     id: 5,
-    question: "Bagaimana saya dapat menghubungi tim dukungan pelanggan",
+    question: "Apakah seseorang tanpa pengalaman dapat mendaftar?",
     answer:
-      'Tim dukungan pelanggan kami selalu siap membantu Anda. Anda dapat menghubungi mereka melalui Nomor Telepon atau Alamat Email yang tercantum pada halaman "Kontak" di website kami.',
+      "Ya, tergantung persyaratan dari perusahaan yang anda ingin lamar. Anda bisa mengeceknya dengan melihat pada persyaratan yang tertera pada lowongan yang dibuat oleh perusahaan tersebut.",
   },
 ];
