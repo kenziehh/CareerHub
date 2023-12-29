@@ -33,7 +33,7 @@ const CVHero = () => {
       <div
         style={{
           backgroundImage: "url(/assets/images/bantuan-bg/cv-hero.jpg)",
-          backgroundSize: "100%",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
         className="w-full h-full flex flex-col justify-center"

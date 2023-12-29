@@ -7,10 +7,10 @@ const InterviewHero = () => {
       <div
         style={{
           backgroundImage: "url(/assets/images/bantuan-bg/interview-hero.webp)",
-          backgroundSize: "100%",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-        className="w-full h-full flex flex-col justify-center"
+        className="w-full h-full flex flex-col justify-center rounded-3xl"
       >
         <div className="text-white max-w-[480px] py-[102px] ml-20 flex flex-col gap-10 items-start">
           <div className="flex flex-col gap-6">
