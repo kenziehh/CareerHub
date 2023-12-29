@@ -5,7 +5,7 @@ import GlobalLayout from "./layouts/GlobalLayout";
 import Home from "./layouts/Home";
 import NonFooter from "./layouts/NonFooter";
 import Bantuan from "./layouts/Bantuan";
-import Interview from "./layouts/About/Interview";
+import Interview from "./layouts/Bantuan/Interview";
 
 const App = () => {
   return (

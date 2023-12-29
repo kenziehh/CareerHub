@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
-const EventSection = ({ heading, subheading, children }) => {
+const EventSection = ({ heading, subheading, to, children }) => {
   return (
     <section className="container pb-20">
       <div className="flex flex-col gap-16">
@@ -12,7 +13,9 @@ const EventSection = ({ heading, subheading, children }) => {
             </h5>
             <h2 className="">{subheading}</h2>
           </div>
-          <Button variant="disabled">Lihat Selengkapnya</Button>
+          <Button variant="disabled">
+            <Link to={to}>Lihat Selengkapnya</Link>
+          </Button>
         </div>
         <div className="flex border-2 border-black overflow-x-auto">
           {children}
