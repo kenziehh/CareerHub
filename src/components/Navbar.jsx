@@ -1,12 +1,13 @@
 import Button from "./Button";
 import navLogo from "/assets/icons/logo-nav.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     isOpen(false);
@@ -86,7 +87,7 @@ export default function Navbar() {
           </li>
         </ul>
         <div className="flex items-center">
-          <Button>Masuk</Button>
+          <Button onClick={() => navigate('?showDialog=y&type=signin')}>Masuk</Button>
         </div>
       </div>
     </nav>

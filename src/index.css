@@ -49,13 +49,21 @@
     line-height: 1.375rem; /* 118.75% */
     letter-spacing: -0.006rem;
   }
+  h5,
+  .h5 {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.025rem;
+  }
 
   .body-text-1 {
     font-size: 1.125rem;
     line-height: 1.375rem; /* 122.222% */
     letter-spacing: -0.0045rem;
   }
-  
+
   .body-text-2 {
     font-size: 1rem;
     line-height: 1.375rem; /* 122.222% */

@@ -5,9 +5,11 @@ import { SlLocationPin } from "react-icons/sl";
 import { HiOutlineSearch } from "react-icons/hi";
 import { useState } from "react";
 import { FiCheckCircle, FiBook, FiGlobe, FiBriefcase } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 export default function Perusahaan() {
   const [selectedId, setSelectedId] = useState(1);
+  const navigate = useNavigate();
 
   return (
     <section className="space-y-4">
@@ -41,7 +43,7 @@ export default function Perusahaan() {
                     </div>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <Button variant="default">
+                    <Button variant="default" onClick={() => navigate("?showDialog=y&type=upload")}>
                       Lamar
                       <FiCheckCircle />
                     </Button>
