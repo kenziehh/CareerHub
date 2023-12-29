@@ -2,7 +2,7 @@ import React from "react";
 import HeroBantuan from "./HeroBantuan";
 import EventSection from "/src/components/EventSection";
 import cvPoster from "/assets/images/bantuan-bg/poster-cv.jpg";
-import interviewPoster from "/assets/images/bantuan-bg/poster-interview.jpg";
+import interviewPoster from "/assets/images/bantuan-bg/workshop-hero.jpg";
 
 const Bantuan = () => {
   return (
@@ -22,7 +22,7 @@ const Bantuan = () => {
       >
         <img className="w-full" src={cvPoster} alt="Poster CV" />
       </EventSection>
-      <EventSection heading="WORKSHOP" subheading="Event yang akan datang">
+      <EventSection heading="WORKSHOP" subheading="Event yang akan datang" to="/bantuan/workshop">
         <img className="w-full" src={cvPoster} alt="Poster Workshop" />
       </EventSection>
     </div>

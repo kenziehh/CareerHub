@@ -7,7 +7,7 @@ import NonFooter from "./layouts/NonFooter";
 import Bantuan from "./layouts/Bantuan";
 import Interview from "./layouts/Bantuan/Interview";
 import CV from "./layouts/Bantuan/CV";
-
+import Workshop from "./layouts/Bantuan/Workshop";
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
             <Route index element={<Bantuan />} />
             <Route path="/bantuan/interview" element={<Interview />} />
             <Route path="/bantuan/cv" element={<CV />} />
-            <Route path="/bantuan/workshop" element={<Interview />} />
+            <Route path="/bantuan/workshop" element={<Workshop />} />
           </Route>
         </Route>
         <Route element={<NonFooter />}>
