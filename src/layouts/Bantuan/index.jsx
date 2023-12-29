@@ -8,12 +8,17 @@ const Bantuan = () => {
   return (
     <div>
       <HeroBantuan />
-      <EventSection heading="INTERVIEW" subheading="Event yang akan datang" to="/bantuan/interview">
+      <EventSection
+        heading="INTERVIEW"
+        subheading="Event yang akan datang"
+        to="/bantuan/interview"
+      >
         <img className="w-full" src={interviewPoster} alt="Poster Interview" />
       </EventSection>
       <EventSection
         heading="CV & SURAT LAMARAN"
         subheading="Event yang akan datang"
+        to="/bantuan/cv"
       >
         <img className="w-full" src={cvPoster} alt="Poster CV" />
       </EventSection>

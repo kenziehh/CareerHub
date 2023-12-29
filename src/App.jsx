@@ -6,6 +6,8 @@ import Home from "./layouts/Home";
 import NonFooter from "./layouts/NonFooter";
 import Bantuan from "./layouts/Bantuan";
 import Interview from "./layouts/Bantuan/Interview";
+import CV from "./layouts/Bantuan/CV";
+
 
 const App = () => {
   return (
@@ -17,7 +19,7 @@ const App = () => {
           <Route path="/bantuan">
             <Route index element={<Bantuan />} />
             <Route path="/bantuan/interview" element={<Interview />} />
-            <Route path="/bantuan/cv" element={<Interview />} />
+            <Route path="/bantuan/cv" element={<CV />} />
             <Route path="/bantuan/workshop" element={<Interview />} />
           </Route>
         </Route>
