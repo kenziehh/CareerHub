@@ -4,12 +4,14 @@ import { BsArrowDownCircle } from "react-icons/bs";
 export default function FAQ() {
   const [isActive, setIsActive] = React.useState(1);
   return (
-    <div className="container flex py-12 gap-8">
-      <div className="flex-1">
-        <img src="/assets/images/faq-img.png" alt="" />
-      </div>
-      <div className="space-y-2 flex-1 flex flex-col pt-[5%] gap-8">
+    <div className="container flex py-12 gap-8 items-center">
+      <img src="/assets/images/faq-img.png" alt="" className="hidden md:block"/>
+
+      <div className="space-y-2 flex-1 flex flex-col pt-[5%] gap-8 items-center">
         <h2>FAQ</h2>
+
+        <img src="/assets/images/faq-img.png" alt="" className="md:hidden max-h-[30vh]"/>
+
         <div className="space-y-2">
           {faqData.map((items) => (
             <React.Fragment key={items.id}>

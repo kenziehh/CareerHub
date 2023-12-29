@@ -5,7 +5,6 @@ const Select = ({ children, variant = "primary", ...rest }) => {
     switch (variant) {
       case "primary":
         return "border-primaryBlue text-primaryBlue";
-      // Add more variants as needed
       default:
         return "border-gray-300 text-gray-700";
     }

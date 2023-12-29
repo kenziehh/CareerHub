@@ -7,11 +7,11 @@ import ugmLogo from "/assets/images/ugm.png";
 
 export default function Partner() {
   return (
-    <section className="container text-center py-16 space-y-[4rem]">
+    <section className="container text-center py-16 space-y-[4rem] flex flex-col items-center">
       <h2>
         Universitas yang <br /> sudah bekerja sama
       </h2>
-      <div className="flex flex-wrap gap-14 items-center justify-center">
+      <div className="grid grid-cols-3 lg:grid-cols-6 gap-12 items-center justify-center">
         <img src={ubLogo} alt="logo-ub" className=""/>
         <img src={itbLogo} alt="logo-itb" className=""/>
         <img src={itsLogo} alt="logo-its" className=""/>
