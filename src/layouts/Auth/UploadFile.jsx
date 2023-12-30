@@ -5,7 +5,14 @@ import { RxCross2 } from "react-icons/rx";
 
 export default function UploadFile({ closeDialog }) {
   const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
-    useDropzone();
+    useDropzone({
+      "image/jpeg": [],
+      "image/png": [],
+      "application/pdf": [],
+      "application/msword": [],
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+        [],
+    });
 
   const acceptedFileItems = acceptedFiles.map((file) => (
     <li key={file.path} className="py-2 flex items-center justify-between">
