@@ -24,6 +24,11 @@ export default function UploadFile({ closeDialog }) {
       </button>
     </li>
   ));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Lamaran anda telah terkirim!!");
+    closeDialog();
+  };
 
   return (
     <form
@@ -68,7 +73,7 @@ export default function UploadFile({ closeDialog }) {
           placeholder="www.ya.com"
           className="border rounded-xl border-black/40 py-2 px-4"
         />
-        <Button variant="default" className="self-end px-8">
+        <Button onClick={handleSubmit} variant="default" className="self-end px-8">
           Kirim
         </Button>
       </div>
