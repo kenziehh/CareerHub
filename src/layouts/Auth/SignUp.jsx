@@ -119,7 +119,7 @@ export default function SignUp() {
             </div>
           </div>
           <div className="space-y-2">
-            <Button variant="default" className="w-full">
+            <Button variant="default" className="w-full" onClick={() => navigate("?showDialog=y&type=signin")}>
               Daftar
             </Button>
             <Button
