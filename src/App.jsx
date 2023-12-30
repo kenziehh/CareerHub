@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 import About from "./layouts/About";
 import Perusahaan from "./layouts/Perusahaan";
 import GlobalLayout from "./layouts/GlobalLayout";
@@ -8,6 +13,7 @@ import Bantuan from "./layouts/Bantuan";
 import Interview from "./layouts/Bantuan/Interview";
 import CV from "./layouts/Bantuan/CV";
 import Workshop from "./layouts/Bantuan/Workshop";
+import { CheckUser } from "./utils/sessionHelper";
 
 const App = () => {
   return (
@@ -16,6 +22,15 @@ const App = () => {
         <Route element={<GlobalLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+        </Route>
+
+        <Route
+          element={
+            <CheckUser red>
+              <GlobalLayout />
+            </CheckUser>
+          }
+        >
           <Route path="/bantuan">
             <Route index element={<Bantuan />} />
             <Route path="/bantuan/interview" element={<Interview />} />

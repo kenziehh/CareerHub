@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
+import { setUserData } from "../../utils/sessionHelper";
 
-export default function SignIn() {
+
+export default function SignIn({ closeDialog }) {
   const {
     register,
     handleSubmit,
@@ -11,6 +13,11 @@ export default function SignIn() {
     // getValues,
   } = useForm();
   const navigate = useNavigate();
+
+  const loginFn = () => {
+    setUserData();
+    closeDialog();
+  };
 
   return (
     <div className="flex gap-12">
@@ -26,7 +33,7 @@ export default function SignIn() {
           </button> */}
         </div>
 
-        <form onSubmit={handleSubmit()}>
+        <form onSubmit={handleSubmit(() => loginFn())}>
           <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-1">
               <label className="h5 font-semibold">Email</label>

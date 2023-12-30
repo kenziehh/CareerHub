@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import CircularIcon from "../../components/CircularIcon";
 
@@ -43,9 +44,11 @@ export default function Landing() {
             Dapatkan akses ke panduan, tips wawancara, dan sumber daya karir
             membantu Anda meraih sukses dalam dunia kerja
           </p>
-          <Button variant="default" className="px-8">
-            Cari Perusahaan
-          </Button>
+          <Link to='/perusahaan'>
+            <Button variant="default" className="px-8">
+              Cari Perusahaan
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

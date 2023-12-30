@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
 import { useState, useEffect } from "react";
+import { CheckUser, invalidateSession } from "../utils/sessionHelper";
 
 export default function Navbar() {
   const location = useLocation();
@@ -86,9 +87,25 @@ export default function Navbar() {
             </Link>
           </li>
         </ul>
-        <div className="flex items-center">
-          <Button onClick={() => navigate('?showDialog=y&type=signin')}>Masuk</Button>
-        </div>
+        <CheckUser forLoggedOut>
+          <div className="flex items-center">
+            <Button onClick={() => navigate("?showDialog=y&type=signin")}>
+              Masuk
+            </Button>
+          </div>
+        </CheckUser>
+        <CheckUser>
+          <div className="flex items-center rounded-full border">
+            <Button
+              onClick={() => {
+                invalidateSession();
+                window.location.reload();
+              }}
+            >
+              Keluar
+            </Button>
+          </div>
+        </CheckUser>
       </div>
     </nav>
   );

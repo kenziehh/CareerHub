@@ -18,7 +18,7 @@ export default function SignUp() {
         <img src="/assets/images/signin-image.png" />
       </div>
 
-      <div className="w-[250px] space-y-8">
+      <div className="w-[250px] md:w-full space-y-8">
         <div className="flex justify-between items-center">
           <h4 className="font-semibold">Daftar</h4>
           {/* <button onClick={() => {}}>
@@ -33,24 +33,20 @@ export default function SignUp() {
               <input
                 {...register("name", {
                   required: "Name is required",
-                  minLength: {
-                    value: 8,
-                    message: "Password must be at least 8 characters",
-                  },
                 })}
-                type="password"
+                type="text"
                 placeholder="John Doe"
                 className="border rounded-xl border-black/40 py-2 px-4 min-w-[15.625rem]"
               />
-              {errors.password && (
-                <p className="text-red-500">{`${errors.password.message}`}</p>
+              {errors.name && (
+                <p className="text-red-500">{`${errors.name.message}`}</p>
               )}
             </div>
             <div className="flex flex-col gap-1">
               <label className="h5 font-semibold">Email</label>
               <input
                 {...register("email", { required: "Email is required" })}
-                type="text"
+                type="email"
                 placeholder="ya@gmail.com"
                 className="border rounded-xl border-black/40 py-2 px-4 min-w-[15.625rem]"
               />
@@ -61,38 +57,30 @@ export default function SignUp() {
             <div className="flex flex-col gap-1">
               <label className="h5 font-semibold">Pendidikan</label>
               <input
-                {...register("password", {
-                  required: "Password is required",
-                  minLength: {
-                    value: 8,
-                    message: "Password must be at least 8 characters",
-                  },
+                {...register("pendidikan", {
+                  required: "Pendidikan is required",
                 })}
-                type="password"
+                type="text"
                 placeholder="Pilih salah satu"
                 className="border rounded-xl border-black/40 py-2 px-4 min-w-[15.625rem]"
               />
-              {errors.password && (
-                <p className="text-red-500">{`${errors.password.message}`}</p>
+              {errors.pendidikan && (
+                <p className="text-red-500">{`${errors.pendidikan.message}`}</p>
               )}
             </div>
 
             <div className="flex flex-col gap-1">
               <label className="h5 font-semibold">Minat</label>
               <input
-                {...register("password", {
-                  required: "Password is required",
-                  minLength: {
-                    value: 8,
-                    message: "Password must be at least 8 characters",
-                  },
+                {...register("minat", {
+                  required: "Minat is required",
                 })}
-                type="password"
+                type="text"
                 placeholder="Pilih salah satu"
                 className="border rounded-xl border-black/40 py-2 px-4 min-w-[15.625rem]"
               />
-              {errors.password && (
-                <p className="text-red-500">{`${errors.password.message}`}</p>
+              {errors.minat && (
+                <p className="text-red-500">{`${errors.minat.message}`}</p>
               )}
             </div>
             <div className="flex flex-col gap-1">
