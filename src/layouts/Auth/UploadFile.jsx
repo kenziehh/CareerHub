@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import Button from "../../components/Button";
 import { RxCross2 } from "react-icons/rx";
 
 export default function UploadFile({ closeDialog }) {
-  const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
+  const { getRootProps, getInputProps, isDragActive, acceptedFiles, open } =
     useDropzone({
       "image/jpeg": [],
       "image/png": [],
@@ -14,21 +14,27 @@ export default function UploadFile({ closeDialog }) {
         [],
     });
 
+  const removeFile = (file) => {
+    const updatedFiles = acceptedFiles.filter(
+      (acceptedFile) => acceptedFile !== file
+    );
+    open({ acceptedFiles: updatedFiles });
+  };
+
   const acceptedFileItems = acceptedFiles.map((file) => (
     <li key={file.path} className="py-2 flex items-center justify-between">
       <p>
         {file.path} - {Math.ceil(file.size / 1000)} KB
       </p>
-      <button className="flex items-center justify-center bg-primaryBlue rounded-full aspect-square w-6 text-white">
+      <button
+        type="button"
+        onClick={() => removeFile(file)}
+        className="flex items-center justify-center bg-primaryBlue rounded-full aspect-square w-6 text-white"
+      >
         <RxCross2 />
       </button>
     </li>
   ));
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Lamaran anda telah terkirim!!");
-    closeDialog();
-  };
 
   return (
     <form
@@ -73,7 +79,7 @@ export default function UploadFile({ closeDialog }) {
           placeholder="www.ya.com"
           className="border rounded-xl border-black/40 py-2 px-4"
         />
-        <Button onClick={handleSubmit} variant="default" className="self-end px-8">
+        <Button variant="default" className="self-end px-8">
           Kirim
         </Button>
       </div>
