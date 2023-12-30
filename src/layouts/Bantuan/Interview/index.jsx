@@ -9,9 +9,6 @@ export default function Interview() {
     "/assets/images/bantuan-bg/tips-interview-1.jpg",
     "/assets/images/bantuan-bg/tips-interview-2.jpg",
     "/assets/images/bantuan-bg/tips-interview-3.jpg",
-    "https://placekitten.com/800/400",
-    "https://placekitten.com/801/400",
-    "https://placekitten.com/802/400",
   ];
   return (
     <div>
