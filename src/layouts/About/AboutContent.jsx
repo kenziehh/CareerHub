@@ -20,7 +20,7 @@ const AboutContent = () => {
         className="hidden lg:block absolute right-0 bottom-0"
       />
       <div className="flex justify-center items-center pb-24 mb-14">
-        <img src={aboutImage} alt="" />
+        <img src={aboutImage} alt="" className="w-full"/>
       </div>
     </div>
   );
