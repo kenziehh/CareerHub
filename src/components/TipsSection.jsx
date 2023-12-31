@@ -18,7 +18,7 @@ const TipsSection = ({ heading, children, images }) => {
   };
   return (
     <section className="container pb-20">
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-10">
         <div className="flex justify-between items-center">
           <h2 className="">{heading}</h2>
           <div className="flex gap-2.5">

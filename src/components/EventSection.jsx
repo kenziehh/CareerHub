@@ -17,7 +17,7 @@ const EventSection = ({ heading, subheading, to, children }) => {
             <Link to={to}>Lihat Selengkapnya</Link>
           </Button>
         </div>
-        <div className="flex border-2 border-black overflow-x-auto">
+        <div className="flex rounded-3xl overflow-x-auto">
           {children}
         </div>
       </div>
